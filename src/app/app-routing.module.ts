@@ -24,7 +24,10 @@ const routes: Routes = [
   { path: 'mark', loadChildren: './mark/mark.module#MarkPageModule' },
   { path: 'vest', loadChildren: './vest/vest.module#VestPageModule' },
   { path: 'sj', loadChildren: './sj/sj.module#SjPageModule' },
-  { path: 'cont', loadChildren: './cont/cont.module#ContPageModule' }
+  { path: 'cont', loadChildren: './cont/cont.module#ContPageModule' },
+  { path: 'etim', loadChildren: './etim/etim.module#EtimPageModule' },
+  { path: 'admead', loadChildren: './admead/admead.module#AdmeadPageModule' },
+  { path: 'come', loadChildren: './come/come.module#ComePageModule' }
 ];
 
 @NgModule({
