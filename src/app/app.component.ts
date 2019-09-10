@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { timer } from 'rxjs/internal/observable/timer';
 
 @Component({
   selector: 'app-root',
@@ -25,8 +26,15 @@ export class AppComponent {
     title: 'Contato',
       url: '/contato',
       icon: 'Call'
-    }
+    },
+    {
+      title: 'Projetos',
+        url: '/projetos',
+        icon: 'Construct'
+      }
   ];
+
+  showSplash = true;
 
   constructor(
     private platform: Platform,
@@ -38,8 +46,13 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      this.statusBar.styleDefault();
+      //this.statusBar.styleDefault();
       this.splashScreen.hide();
+      if (this.platform.is('android')) {
+        this.statusBar.backgroundColorByHexString("#33000000");
+      }
+
+      timer(3000).subscribe(() => this.showSplash = false);
     });
   }
 }

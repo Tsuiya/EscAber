@@ -27,7 +27,8 @@ const routes: Routes = [
   { path: 'cont', loadChildren: './cont/cont.module#ContPageModule' },
   { path: 'etim', loadChildren: './etim/etim.module#EtimPageModule' },
   { path: 'admead', loadChildren: './admead/admead.module#AdmeadPageModule' },
-  { path: 'come', loadChildren: './come/come.module#ComePageModule' }
+  { path: 'come', loadChildren: './come/come.module#ComePageModule' },
+  { path: 'projetos', loadChildren: './projetos/projetos.module#ProjetosPageModule' }
 ];
 
 @NgModule({
