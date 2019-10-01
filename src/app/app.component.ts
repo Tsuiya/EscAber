@@ -48,11 +48,12 @@ export class AppComponent {
     this.platform.ready().then(() => {
       //this.statusBar.styleDefault();
       this.splashScreen.hide();
+      this.statusBar.overlaysWebView(true);
       if (this.platform.is('android')) {
         this.statusBar.backgroundColorByHexString("#33000000");
       }
 
-      timer(3000).subscribe(() => this.showSplash = false);
+      timer(2000).subscribe(() => this.showSplash = false);
     });
   }
 }
