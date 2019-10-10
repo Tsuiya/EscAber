@@ -28,7 +28,22 @@ const routes: Routes = [
   { path: 'etim', loadChildren: './etim/etim.module#EtimPageModule' },
   { path: 'admead', loadChildren: './admead/admead.module#AdmeadPageModule' },
   { path: 'come', loadChildren: './come/come.module#ComePageModule' },
-  { path: 'projetos', loadChildren: './projetos/projetos.module#ProjetosPageModule' }
+  { path: 'projetos', loadChildren: './projetos/projetos.module#ProjetosPageModule' },
+  { path: 'ultimosposts', loadChildren: './ultimosposts/ultimosposts.module#UltimospostsPageModule' },
+  { path: 'teste', loadChildren: './teste/teste.module#TestePageModule' },
+  { path: 'sala1', loadChildren: './sala1/sala1.module#Sala1PageModule' },
+  { path: 'sala2', loadChildren: './sala2/sala2.module#Sala2PageModule' },
+  { path: 'sala3', loadChildren: './sala3/sala3.module#Sala3PageModule' },
+  { path: 'sala4', loadChildren: './sala4/sala4.module#Sala4PageModule' },
+  { path: 'sala5', loadChildren: './sala5/sala5.module#Sala5PageModule' },
+  { path: 'sala6', loadChildren: './sala6/sala6.module#Sala6PageModule' },
+  { path: 'sala7', loadChildren: './sala7/sala7.module#Sala7PageModule' },
+  { path: 'sala8', loadChildren: './sala8/sala8.module#Sala8PageModule' },
+  { path: 'sala9', loadChildren: './sala9/sala9.module#Sala9PageModule' },
+  { path: 'sala10', loadChildren: './sala10/sala10.module#Sala10PageModule' },
+  { path: 'biblioteca', loadChildren: './biblioteca/biblioteca.module#BibliotecaPageModule' },
+  { path: 'jogos', loadChildren: './jogos/jogos.module#JogosPageModule' },
+  { path: 'patio', loadChildren: './patio/patio.module#PatioPageModule' }
 ];
 
 @NgModule({

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Platform } from '@ionic/angular';
+import { Platform, ActionSheetController, ModalController, MenuController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { timer } from 'rxjs/internal/observable/timer';
@@ -11,7 +11,14 @@ import { timer } from 'rxjs/internal/observable/timer';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
+  
+  lastTimeBackPress = 0;
+  timePeriodToExit = 2000;
+
+  
+  
   public appPages = [
+
     {
       title: 'Início',
       url: '/home',
@@ -31,7 +38,12 @@ export class AppComponent {
       title: 'Projetos',
         url: '/projetos',
         icon: 'Construct'
-      }
+      },
+    {
+      title: 'Ultimos posts',
+      url: '/teste',
+      icon: 'compass' ,
+    },
   ];
 
   showSplash = true;
@@ -39,11 +51,16 @@ export class AppComponent {
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
-  ) {
+    private statusBar: StatusBar,
+    public modalCtrl: ModalController    )
+    {
+
     this.initializeApp();
+
   }
 
+  
+ 
   initializeApp() {
     this.platform.ready().then(() => {
       //this.statusBar.styleDefault();
@@ -56,4 +73,5 @@ export class AppComponent {
       timer(2000).subscribe(() => this.showSplash = false);
     });
   }
+
 }
